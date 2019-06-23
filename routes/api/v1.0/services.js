@@ -12,7 +12,7 @@ var Cliente = require("../../../database/collections/../../database/collections/
 /*Producto*/
 
 
-router.post("/producto", (req, res) => {
+/*router.post("/producto", (req, res) => {
 
   //Ejemplo de validacion
   var data = req.body;
@@ -26,6 +26,6 @@ router.post("/producto", (req, res) => {
       "msn" :  "Producto agregado con exito"
     });
   });
-});
+});*/
 
 module.exports = router;
