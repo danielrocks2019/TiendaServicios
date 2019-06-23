@@ -28,29 +28,4 @@ router.post("/producto", (req, res) => {
   });
 });
 
-//metodo get
-
-router.get("/producto",  (req, res) => {
-  var skip = 0;
-  var limit = "";
-  if (req.query.skip != null) {
-    skip = req.query.skip;
-  }
-
-  if (req.query.limit != null) {
-    limit = req.query.limit;
-  }
-  Producto.find({}).skip(skip).limit(limit).exec((err, docs) => {
-    if (err) {
-      res.status(500).json({
-        "msn" : "Error en la db"
-      });
-
-      return;
-    }
-    res.json({
-      result : docs
-    });
-  });
-});
 module.exports = router;
